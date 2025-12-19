@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleNav Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h3>SimpleNav Settings</h3>
+  
+  <label for="urlInput">Domain:</label>
+  <input type="text" id="urlInput" placeholder="example.com">
+  
+  <label for="selectorInput">Target Element (Selector):</label>
+  <input type="text" id="selectorInput" placeholder=".modal, #banner, body">
+  
+  <div class="action-area">
+    
+    <div style="margin-bottom: 5px;">
+      <label for="actionSelect" style="font-size: 11px;">Action:</label>
+      <select id="actionSelect">
+        <option value="remove">Delete Element</option>
+        <option value="removeClass">Remove Class</option>
+        <option value="addClass">Add Class</option>
+        <option value="removeStyle">Remove CSS Property</option>
+        <option value="setStyle">Set / Add CSS Property</option>
+      </select>
+    </div>
+    
+    <div id="valueContainer" style="display: none;">
+      <label for="valueInput" id="valueLabel" style="font-size: 11px;">Parameter 1:</label>
+      <input type="text" id="valueInput">
+    </div>
+
+    <div id="extraValueContainer" style="display: none;">
+      <label for="extraValueInput" style="font-size: 11px;">New Value:</label>
+      <input type="text" id="extraValueInput" placeholder="e.g. hidden, red !important">
+    </div>
+
+  </div>
+  
+  <button id="actionBtn">Save Rule</button>
+  <button id="cancelBtn" style="display:none;">Cancel Edit</button>
+  
+  <hr>
+  
+  <h4>Active Rules:</h4>
+  <div id="rulesList"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

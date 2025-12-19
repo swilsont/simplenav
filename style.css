@@ -1,0 +1,177 @@
+/* --- Base Layout & Typography --- */
+body {
+  width: 350px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  color: #333;
+  background-color: #fff;
+}
+
+h3 { margin-top: 0; margin-bottom: 10px; }
+h4 { margin-bottom: 5px; margin-top: 10px; }
+
+/* --- Inputs & Forms --- */
+input, select {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+  color: #555;
+}
+
+/* Container for action-specific inputs */
+.action-area {
+  background: #f9f9f9;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* --- Buttons --- */
+/* Primary Action Button (Default State: Blue) */
+#actionBtn {
+  width: 100%;
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+  margin-top: 5px;
+}
+#actionBtn:hover { background-color: #0056b3; }
+
+/* Primary Action Button (Edit Mode: Green) */
+#actionBtn.mode-edit { background-color: #28a745; }
+#actionBtn.mode-edit:hover { background-color: #218838; }
+
+/* Cancel Button */
+#cancelBtn {
+  width: 100%;
+  padding: 6px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 12px;
+}
+#cancelBtn:hover { background-color: #5a6268; }
+
+/* --- ACCORDION STYLES --- */
+
+/* The clickable header for each domain group */
+.domain-group-header {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.domain-group-header:hover { background-color: #e2e6ea; }
+
+/* Active State (Expanded) */
+.domain-group-header.active {
+  background-color: #e7f1ff;
+  border-color: #b8daff;
+  color: #0056b3;
+}
+
+/* Arrow Animation */
+.header-arrow {
+  font-size: 10px;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+.domain-group-header.active .header-arrow { transform: rotate(180deg); }
+
+/* Rules Container (Hidden by default) */
+.rules-container {
+  display: none;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+.rules-container.open {
+  display: block;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Individual Rule Item */
+.rule-item {
+  background-color: #fff;
+  border-left: 3px solid #dee2e6;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.rule-content {
+  flex-grow: 1;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.rule-selector {
+  font-size: 11px;
+  font-family: monospace;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Action Badges --- */
+.rule-action {
+  font-size: 9px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  margin-top: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.bg-remove { background-color: #dc3545; } /* Red */
+.bg-modify { background-color: #17a2b8; } /* Cyan */
+.bg-set    { background-color: #6610f2; } /* Purple */
+.bg-add    { background-color: #28a745; } /* Green */
+
+/* Edit/Delete Buttons */
+.btn-group { display: flex; gap: 5px; }
+.edit-btn, .delete-btn {
+  border: none; padding: 4px 8px; cursor: pointer; font-size: 12px; border-radius: 3px; color: white;
+}
+.edit-btn { background-color: #ffc107; color: #333; }
+.delete-btn { background-color: #dc3545; }
