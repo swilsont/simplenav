@@ -10,6 +10,7 @@ SimpleNav is a Chrome/Firefox extension that will become the ultimate power tool
 With a simple and organized interface, you can create custom rules to remove elements, modify styles, or manage CSS classes on any domain.
 
 ### [Install as Google Chrome Extension here](https://chromewebstore.google.com/detail/simplenav/kejbfjkdgoallacidfpblpkghecfnelj)
+### [Install as Firefox Add-on here](https://addons.mozilla.org/addon/simplenav)
 
 ## 🚀 Key Features:
 - **🗑️ Delete Anything:** Zap annoying headers, floating banners, chatbots, or footer overlays with a simple CSS selector.
